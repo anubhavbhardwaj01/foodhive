@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "dev": "nodemon Backend/index.js",
-  "build": "npm install --prefix Frontend --include=dev && npm run build --prefix Frontend",
-  "start": "node Backend/index.js",
+     "dev": "nodemon index.js",
+  "start": "nodemon index.js",
   "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

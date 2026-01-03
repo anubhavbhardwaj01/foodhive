@@ -20,7 +20,7 @@ app.use(
   })
 );
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 // app.get("/", (req, res) => {
 //   res.send("hey there ");
 // });
@@ -30,10 +30,8 @@ app.use("/api/review", reviewRoutes);
 app.use("/api/donate", donateRoutes);
 app.use("/api/request", requestRoutes);
 
-app.use(express.static(path.join(_dirname, "/Frontend/dist")))
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(_dirname,"Frontend","dist","index.html"))
-})
+// app.use(express.static(path.join(_dirname, "/Frontend/dist")))
+
 app.listen(PORT, () => {
   console.log(`server started at ${PORT}`);
 });
