@@ -30,7 +30,11 @@ app.use("/api/review", reviewRoutes);
 app.use("/api/donate", donateRoutes);
 app.use("/api/request", requestRoutes);
 
-// app.use(express.static(path.join(_dirname, "/Frontend/dist")))
+app.use(express.static(path.join(_dirname, "/Frontend/dist")))
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
+
+})
 
 app.listen(PORT, () => {
   console.log(`server started at ${PORT}`);
